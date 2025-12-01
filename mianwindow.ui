@@ -13,6 +13,104 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #1e1e1e;
+}
+
+QWidget {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+QMenuBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2d2d2d, stop:1 #252525);
+    border-bottom: 1px solid #3c3c3c;
+    padding: 2px;
+    spacing: 3px;
+    color: #e0e0e0;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 2px;
+    color: #e0e0e0;
+}
+
+QMenuBar::item:selected {
+    background-color: #0078d4;
+    color: white;
+}
+
+QMenuBar::item:pressed {
+    background-color: #005a9e;
+    color: white;
+}
+
+QMenu {
+    background-color: #2d2d2d;
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+    padding: 6px;
+    color: #e0e0e0;
+}
+
+QMenu::item {
+    padding: 8px 30px 8px 20px;
+    border-radius: 4px;
+    margin: 2px;
+    color: #e0e0e0;
+}
+
+QMenu::item:selected {
+    background-color: #0078d4;
+    color: white;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #3c3c3c;
+    margin: 6px 10px;
+}
+
+QToolBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2d2d2d, stop:1 #252525);
+    border-bottom: 1px solid #3c3c3c;
+    padding: 4px;
+    spacing: 4px;
+}
+
+QToolBar::separator {
+    width: 1px;
+    background: #3c3c3c;
+    margin: 4px 8px;
+}
+
+QToolButton {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #e0e0e0;
+}
+
+QToolButton:hover {
+    background-color: #3c3c3c;
+    border: 1px solid #0078d4;
+}
+
+QToolButton:pressed {
+    background-color: #4a4a4a;
+}
+
+QStatusBar {
+    background-color: #007acc;
+    color: white;
+    border-top: 1px solid #3c3c3c;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -20,7 +118,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>28</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -46,8 +144,22 @@
     <addaction name="actionAll"/>
     <addaction name="actionPaste"/>
    </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>工具(T)</string>
+    </property>
+    <addaction name="actionOptions"/>
+    <addaction name="actionFont"/>
+    <addaction name="separator"/>
+    <addaction name="actionTheme"/>
+    <addaction name="actionLanguage"/>
+    <addaction name="separator"/>
+    <addaction name="actionCalculator"/>
+    <addaction name="actionCalendar"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
+   <addaction name="menuTools"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -157,6 +269,39 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionOptions">
+   <property name="text">
+    <string>選項設定(O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+,</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="text">
+    <string>字體設定(F)</string>
+   </property>
+  </action>
+  <action name="actionTheme">
+   <property name="text">
+    <string>主題切換(T)</string>
+   </property>
+  </action>
+  <action name="actionLanguage">
+   <property name="text">
+    <string>語言設定(L)</string>
+   </property>
+  </action>
+  <action name="actionCalculator">
+   <property name="text">
+    <string>計算機(C)</string>
+   </property>
+  </action>
+  <action name="actionCalendar">
+   <property name="text">
+    <string>日曆(D)</string>
    </property>
   </action>
  </widget>
