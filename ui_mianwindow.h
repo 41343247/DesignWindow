@@ -35,10 +35,17 @@ public:
     QAction *actionCopy;
     QAction *actionAll;
     QAction *actionPaste;
+    QAction *actionOptions;
+    QAction *actionFont;
+    QAction *actionTheme;
+    QAction *actionLanguage;
+    QAction *actionCalculator;
+    QAction *actionCalendar;
     QWidget *centralwidget;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menu_2;
+    QMenu *menuTools;
     QStatusBar *statusbar;
     QToolBar *toolBar;
     QToolBar *toolBar_2;
@@ -48,6 +55,103 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
+        MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
+"    background-color: #1e1e1e;\n"
+"}\n"
+"\n"
+"QWidget {\n"
+"    background-color: #1e1e1e;\n"
+"    color: #e0e0e0;\n"
+"}\n"
+"\n"
+"QMenuBar {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2d2d2d, stop:1 #252525);\n"
+"    border-bottom: 1px solid #3c3c3c;\n"
+"    padding: 2px;\n"
+"    spacing: 3px;\n"
+"    color: #e0e0e0;\n"
+"}\n"
+"\n"
+"QMenuBar::item {\n"
+"    background: transparent;\n"
+"    padding: 6px 12px;\n"
+"    border-radius: 4px;\n"
+"    margin: 2px;\n"
+"    color: #e0e0e0;\n"
+"}\n"
+"\n"
+"QMenuBar::item:selected {\n"
+"    background-color: #0078d4;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QMenuBar::item:pressed {\n"
+"    background-color: #005a9e;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QMenu {\n"
+"    background-color: #2d2d2d;\n"
+"    border: 1px solid #3c3c3c;\n"
+"    border-radius: 6px;\n"
+"    padding: 6px;\n"
+"    color: #e0e0e0;\n"
+"}\n"
+"\n"
+"QMenu::item {\n"
+"    padding: 8px 30px 8px 20px;\n"
+"    border-radius: 4px;\n"
+"    margin: 2px;\n"
+"    color: #"
+                        "e0e0e0;\n"
+"}\n"
+"\n"
+"QMenu::item:selected {\n"
+"    background-color: #0078d4;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QMenu::separator {\n"
+"    height: 1px;\n"
+"    background: #3c3c3c;\n"
+"    margin: 6px 10px;\n"
+"}\n"
+"\n"
+"QToolBar {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2d2d2d, stop:1 #252525);\n"
+"    border-bottom: 1px solid #3c3c3c;\n"
+"    padding: 4px;\n"
+"    spacing: 4px;\n"
+"}\n"
+"\n"
+"QToolBar::separator {\n"
+"    width: 1px;\n"
+"    background: #3c3c3c;\n"
+"    margin: 4px 8px;\n"
+"}\n"
+"\n"
+"QToolButton {\n"
+"    background: transparent;\n"
+"    border: 1px solid transparent;\n"
+"    border-radius: 4px;\n"
+"    padding: 4px 8px;\n"
+"    color: #e0e0e0;\n"
+"}\n"
+"\n"
+"QToolButton:hover {\n"
+"    background-color: #3c3c3c;\n"
+"    border: 1px solid #0078d4;\n"
+"}\n"
+"\n"
+"QToolButton:pressed {\n"
+"    background-color: #4a4a4a;\n"
+"}\n"
+"\n"
+"QStatusBar {\n"
+"    background-color: #007acc;\n"
+"    color: white;\n"
+"    border-top: 1px solid #3c3c3c;\n"
+"}"));
         actionNew = new QAction(MainWindow);
         actionNew->setObjectName("actionNew");
         actionOpen = new QAction(MainWindow);
@@ -70,16 +174,30 @@ public:
         actionAll->setObjectName("actionAll");
         actionPaste = new QAction(MainWindow);
         actionPaste->setObjectName("actionPaste");
+        actionOptions = new QAction(MainWindow);
+        actionOptions->setObjectName("actionOptions");
+        actionFont = new QAction(MainWindow);
+        actionFont->setObjectName("actionFont");
+        actionTheme = new QAction(MainWindow);
+        actionTheme->setObjectName("actionTheme");
+        actionLanguage = new QAction(MainWindow);
+        actionLanguage->setObjectName("actionLanguage");
+        actionCalculator = new QAction(MainWindow);
+        actionCalculator->setObjectName("actionCalculator");
+        actionCalendar = new QAction(MainWindow);
+        actionCalendar->setObjectName("actionCalendar");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 800, 28));
         menu = new QMenu(menubar);
         menu->setObjectName("menu");
         menu_2 = new QMenu(menubar);
         menu_2->setObjectName("menu_2");
+        menuTools = new QMenu(menubar);
+        menuTools->setObjectName("menuTools");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -93,6 +211,7 @@ public:
 
         menubar->addAction(menu->menuAction());
         menubar->addAction(menu_2->menuAction());
+        menubar->addAction(menuTools->menuAction());
         menu->addAction(actionNew);
         menu->addAction(actionOpen);
         menu->addAction(actionClose);
@@ -106,6 +225,14 @@ public:
         menu_2->addAction(actionCopy);
         menu_2->addAction(actionAll);
         menu_2->addAction(actionPaste);
+        menuTools->addAction(actionOptions);
+        menuTools->addAction(actionFont);
+        menuTools->addSeparator();
+        menuTools->addAction(actionTheme);
+        menuTools->addAction(actionLanguage);
+        menuTools->addSeparator();
+        menuTools->addAction(actionCalculator);
+        menuTools->addAction(actionCalendar);
         toolBar->addAction(actionNew);
         toolBar->addAction(actionOpen);
         toolBar->addAction(actionSave);
@@ -158,8 +285,18 @@ public:
 #if QT_CONFIG(shortcut)
         actionPaste->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+V", nullptr));
 #endif // QT_CONFIG(shortcut)
+        actionOptions->setText(QCoreApplication::translate("MainWindow", "\351\201\270\351\240\205\350\250\255\345\256\232(O)", nullptr));
+#if QT_CONFIG(shortcut)
+        actionOptions->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+,", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionFont->setText(QCoreApplication::translate("MainWindow", "\345\255\227\351\253\224\350\250\255\345\256\232(F)", nullptr));
+        actionTheme->setText(QCoreApplication::translate("MainWindow", "\344\270\273\351\241\214\345\210\207\346\217\233(T)", nullptr));
+        actionLanguage->setText(QCoreApplication::translate("MainWindow", "\350\252\236\350\250\200\350\250\255\345\256\232(L)", nullptr));
+        actionCalculator->setText(QCoreApplication::translate("MainWindow", "\350\250\210\347\256\227\346\251\237(C)", nullptr));
+        actionCalendar->setText(QCoreApplication::translate("MainWindow", "\346\227\245\346\233\206(D)", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\252\224\346\241\210(F)", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\267\250\350\274\257(E)", nullptr));
+        menuTools->setTitle(QCoreApplication::translate("MainWindow", "\345\267\245\345\205\267(T)", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
         toolBar_2->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar_2", nullptr));
     } // retranslateUi
