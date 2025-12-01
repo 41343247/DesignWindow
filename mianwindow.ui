@@ -14,11 +14,21 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMenuBar {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f8f8f8, stop:1 #e8e8e8);
-    border-bottom: 1px solid #c0c0c0;
+   <string notr="true">QMainWindow {
+    background-color: #1e1e1e;
+}
+
+QWidget {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+QMenuBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2d2d2d, stop:1 #252525);
+    border-bottom: 1px solid #3c3c3c;
     padding: 2px;
     spacing: 3px;
+    color: #e0e0e0;
 }
 
 QMenuBar::item {
@@ -26,6 +36,7 @@ QMenuBar::item {
     padding: 6px 12px;
     border-radius: 4px;
     margin: 2px;
+    color: #e0e0e0;
 }
 
 QMenuBar::item:selected {
@@ -39,39 +50,41 @@ QMenuBar::item:pressed {
 }
 
 QMenu {
-    background-color: #ffffff;
-    border: 1px solid #c0c0c0;
+    background-color: #2d2d2d;
+    border: 1px solid #3c3c3c;
     border-radius: 6px;
     padding: 6px;
+    color: #e0e0e0;
 }
 
 QMenu::item {
     padding: 8px 30px 8px 20px;
     border-radius: 4px;
     margin: 2px;
+    color: #e0e0e0;
 }
 
 QMenu::item:selected {
-    background-color: #e5f3ff;
-    color: #0078d4;
+    background-color: #0078d4;
+    color: white;
 }
 
 QMenu::separator {
     height: 1px;
-    background: #e0e0e0;
+    background: #3c3c3c;
     margin: 6px 10px;
 }
 
 QToolBar {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f8f8f8, stop:1 #e8e8e8);
-    border-bottom: 1px solid #c0c0c0;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2d2d2d, stop:1 #252525);
+    border-bottom: 1px solid #3c3c3c;
     padding: 4px;
     spacing: 4px;
 }
 
 QToolBar::separator {
     width: 1px;
-    background: #c0c0c0;
+    background: #3c3c3c;
     margin: 4px 8px;
 }
 
@@ -80,15 +93,22 @@ QToolButton {
     border: 1px solid transparent;
     border-radius: 4px;
     padding: 4px 8px;
+    color: #e0e0e0;
 }
 
 QToolButton:hover {
-    background-color: #e5f3ff;
+    background-color: #3c3c3c;
     border: 1px solid #0078d4;
 }
 
 QToolButton:pressed {
-    background-color: #cce4f7;
+    background-color: #4a4a4a;
+}
+
+QStatusBar {
+    background-color: #007acc;
+    color: white;
+    border-top: 1px solid #3c3c3c;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
