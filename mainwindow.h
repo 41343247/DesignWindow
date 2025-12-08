@@ -11,5 +11,7 @@ class MainWindow : public QMainWindow,Ui_MainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+private slots:
+    void on_actionASave_triggered();
 };
 #endif // MAINWINDOW_H
