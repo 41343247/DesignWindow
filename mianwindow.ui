@@ -111,14 +111,31 @@ QStatusBar {
     border-top: 1px solid #3c3c3c;
 }</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft JhengHei UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>28</height>
+     <height>36</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -193,6 +210,10 @@ QStatusBar {
    <addaction name="actionPaste"/>
   </widget>
   <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/new.png</normaloff>images/new.png</iconset>
+   </property>
    <property name="text">
     <string>新增(N)</string>
    </property>
@@ -201,6 +222,10 @@ QStatusBar {
    </property>
   </action>
   <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/copy.png</normaloff>images/copy.png</iconset>
+   </property>
    <property name="text">
     <string>開啟(O)</string>
    </property>
@@ -214,6 +239,10 @@ QStatusBar {
    </property>
   </action>
   <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/save.png</normaloff>images/save.png</iconset>
+   </property>
    <property name="text">
     <string>儲存(S)</string>
    </property>
@@ -222,6 +251,10 @@ QStatusBar {
    </property>
   </action>
   <action name="actionASave">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/asave.png</normaloff>images/asave.png</iconset>
+   </property>
    <property name="text">
     <string>另存(A)</string>
    </property>
@@ -232,6 +265,10 @@ QStatusBar {
    </property>
   </action>
   <action name="actionUndo">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/undo.png</normaloff>images/undo.png</iconset>
+   </property>
    <property name="text">
     <string>還原(U)</string>
    </property>
@@ -240,6 +277,10 @@ QStatusBar {
    </property>
   </action>
   <action name="actionCuT">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/cut.png</normaloff>images/cut.png</iconset>
+   </property>
    <property name="text">
     <string>剪下(T)</string>
    </property>
@@ -248,6 +289,10 @@ QStatusBar {
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/copy.png</normaloff>images/copy.png</iconset>
+   </property>
    <property name="text">
     <string>複製(C)</string>
    </property>
@@ -264,6 +309,10 @@ QStatusBar {
    </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/paste.png</normaloff>images/paste.png</iconset>
+   </property>
    <property name="text">
     <string>貼上(P)</string>
    </property>

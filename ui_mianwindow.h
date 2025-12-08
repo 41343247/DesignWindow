@@ -12,10 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -42,6 +44,8 @@ public:
     QAction *actionCalculator;
     QAction *actionCalendar;
     QWidget *centralwidget;
+    QHBoxLayout *horizontalLayout;
+    QTextEdit *textEdit;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menu_2;
@@ -154,26 +158,48 @@ public:
 "}"));
         actionNew = new QAction(MainWindow);
         actionNew->setObjectName("actionNew");
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("images/new.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionNew->setIcon(icon);
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName("actionOpen");
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("images/copy.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionOpen->setIcon(icon1);
         actionClose = new QAction(MainWindow);
         actionClose->setObjectName("actionClose");
         actionSave = new QAction(MainWindow);
         actionSave->setObjectName("actionSave");
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8("images/save.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionSave->setIcon(icon2);
         actionASave = new QAction(MainWindow);
         actionASave->setObjectName("actionASave");
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8("images/asave.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionASave->setIcon(icon3);
         actionQuit = new QAction(MainWindow);
         actionQuit->setObjectName("actionQuit");
         actionUndo = new QAction(MainWindow);
         actionUndo->setObjectName("actionUndo");
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8("images/undo.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionUndo->setIcon(icon4);
         actionCuT = new QAction(MainWindow);
         actionCuT->setObjectName("actionCuT");
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8("images/cut.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionCuT->setIcon(icon5);
         actionCopy = new QAction(MainWindow);
         actionCopy->setObjectName("actionCopy");
+        actionCopy->setIcon(icon1);
         actionAll = new QAction(MainWindow);
         actionAll->setObjectName("actionAll");
         actionPaste = new QAction(MainWindow);
         actionPaste->setObjectName("actionPaste");
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8("images/paste.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionPaste->setIcon(icon6);
         actionOptions = new QAction(MainWindow);
         actionOptions->setObjectName("actionOptions");
         actionFont = new QAction(MainWindow);
@@ -188,10 +214,17 @@ public:
         actionCalendar->setObjectName("actionCalendar");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        horizontalLayout = new QHBoxLayout(centralwidget);
+        horizontalLayout->setObjectName("horizontalLayout");
+        textEdit = new QTextEdit(centralwidget);
+        textEdit->setObjectName("textEdit");
+
+        horizontalLayout->addWidget(textEdit);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 28));
+        menubar->setGeometry(QRect(0, 0, 800, 36));
         menu = new QMenu(menubar);
         menu->setObjectName("menu");
         menu_2 = new QMenu(menubar);
@@ -294,6 +327,14 @@ public:
         actionLanguage->setText(QCoreApplication::translate("MainWindow", "\350\252\236\350\250\200\350\250\255\345\256\232(L)", nullptr));
         actionCalculator->setText(QCoreApplication::translate("MainWindow", "\350\250\210\347\256\227\346\251\237(C)", nullptr));
         actionCalendar->setText(QCoreApplication::translate("MainWindow", "\346\227\245\346\233\206(D)", nullptr));
+        textEdit->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Microsoft JhengHei UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\252\224\346\241\210(F)", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\267\250\350\274\257(E)", nullptr));
         menuTools->setTitle(QCoreApplication::translate("MainWindow", "\345\267\245\345\205\267(T)", nullptr));

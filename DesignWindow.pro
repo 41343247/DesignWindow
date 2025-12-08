@@ -22,3 +22,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 FORMS += \
     mianwindow.ui
+
+RESOURCES += \
+    images/designwindow.qrc
