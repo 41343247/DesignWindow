@@ -31,6 +31,8 @@ void MainWindow::on_actionASave_triggered()
     out<<textEdit->toPlainText();
 
     file.close();
+
+    currentFilePath=fileName;
 }
 
 void MainWindow::on_actionSave_triggered()
