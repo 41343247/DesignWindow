@@ -13,5 +13,8 @@ public:
     ~MainWindow();
 private slots:
     void on_actionASave_triggered();
+    void on_actionSave_triggered();
+private:
+    QString currentFilePath;
 };
 #endif // MAINWINDOW_H

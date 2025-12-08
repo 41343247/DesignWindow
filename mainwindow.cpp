@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include <QFileDialog>
-#include <Qfile>
+#include <QFile>
 #include <QTextStream>
 #include <QMessageBox>
 
@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     setupUi(this);
+
 }
 
 MainWindow::~MainWindow() {}
@@ -31,3 +32,23 @@ void MainWindow::on_actionASave_triggered()
 
     file.close();
 }
+
+void MainWindow::on_actionSave_triggered()
+{
+    if (currentFilePath.isEmpty()) {
+        on_actionASave_triggered();
+        return;
+    }
+
+    QFile file(currentFilePath);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, tr("錯誤"), tr("無法開啟檔案進行儲存"));
+        return;
+    }
+
+    QTextStream out(&file);
+    out << textEdit->toPlainText();
+
+    file.close();
+}
+

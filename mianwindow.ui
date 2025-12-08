@@ -211,8 +211,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </widget>
   <action name="actionNew">
    <property name="icon">
-    <iconset>
-     <normaloff>images/new.png</normaloff>images/new.png</iconset>
+    <iconset resource="images/designwindow.qrc">
+     <normaloff>:/images/new.png</normaloff>:/images/new.png</iconset>
    </property>
    <property name="text">
     <string>新增(N)</string>
@@ -223,8 +223,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset>
-     <normaloff>images/copy.png</normaloff>images/copy.png</iconset>
+    <iconset resource="images/designwindow.qrc">
+     <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
    </property>
    <property name="text">
     <string>開啟(O)</string>
@@ -240,8 +240,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset>
-     <normaloff>images/save.png</normaloff>images/save.png</iconset>
+    <iconset resource="images/designwindow.qrc">
+     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
    </property>
    <property name="text">
     <string>儲存(S)</string>
@@ -252,8 +252,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </action>
   <action name="actionASave">
    <property name="icon">
-    <iconset>
-     <normaloff>images/asave.png</normaloff>images/asave.png</iconset>
+    <iconset resource="images/designwindow.qrc">
+     <normaloff>:/images/asave.png</normaloff>:/images/asave.png</iconset>
    </property>
    <property name="text">
     <string>另存(A)</string>
@@ -266,8 +266,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </action>
   <action name="actionUndo">
    <property name="icon">
-    <iconset>
-     <normaloff>images/undo.png</normaloff>images/undo.png</iconset>
+    <iconset resource="images/designwindow.qrc">
+     <normaloff>:/images/undo.png</normaloff>:/images/undo.png</iconset>
    </property>
    <property name="text">
     <string>還原(U)</string>
@@ -278,8 +278,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </action>
   <action name="actionCuT">
    <property name="icon">
-    <iconset>
-     <normaloff>images/cut.png</normaloff>images/cut.png</iconset>
+    <iconset resource="images/designwindow.qrc">
+     <normaloff>:/images/cut.png</normaloff>:/images/cut.png</iconset>
    </property>
    <property name="text">
     <string>剪下(T)</string>
@@ -290,8 +290,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </action>
   <action name="actionCopy">
    <property name="icon">
-    <iconset>
-     <normaloff>images/copy.png</normaloff>images/copy.png</iconset>
+    <iconset resource="images/designwindow.qrc">
+     <normaloff>:/images/copy.png</normaloff>:/images/copy.png</iconset>
    </property>
    <property name="text">
     <string>複製(C)</string>
@@ -310,8 +310,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   </action>
   <action name="actionPaste">
    <property name="icon">
-    <iconset>
-     <normaloff>images/paste.png</normaloff>images/paste.png</iconset>
+    <iconset resource="images/designwindow.qrc">
+     <normaloff>:/images/paste.png</normaloff>:/images/paste.png</iconset>
    </property>
    <property name="text">
     <string>貼上(P)</string>
@@ -354,6 +354,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="images/designwindow.qrc"/>
+ </resources>
  <connections/>
 </ui>
