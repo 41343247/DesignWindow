@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mianwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.9.1
+** Created by: Qt User Interface Compiler version 5.15.13
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,7 +10,7 @@
 #define UI_MIANWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
@@ -57,7 +57,7 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName("MainWindow");
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 600);
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
 "    background-color: #1e1e1e;\n"
@@ -157,90 +157,90 @@ public:
 "    border-top: 1px solid #3c3c3c;\n"
 "}"));
         actionNew = new QAction(MainWindow);
-        actionNew->setObjectName("actionNew");
+        actionNew->setObjectName(QString::fromUtf8("actionNew"));
         QIcon icon;
-        icon.addFile(QString::fromUtf8("images/new.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon.addFile(QString::fromUtf8("images/new.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionNew->setIcon(icon);
         actionOpen = new QAction(MainWindow);
-        actionOpen->setObjectName("actionOpen");
+        actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8("images/copy.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon1.addFile(QString::fromUtf8("images/copy.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionOpen->setIcon(icon1);
         actionClose = new QAction(MainWindow);
-        actionClose->setObjectName("actionClose");
+        actionClose->setObjectName(QString::fromUtf8("actionClose"));
         actionSave = new QAction(MainWindow);
-        actionSave->setObjectName("actionSave");
+        actionSave->setObjectName(QString::fromUtf8("actionSave"));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8("images/save.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon2.addFile(QString::fromUtf8("images/save.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionSave->setIcon(icon2);
         actionASave = new QAction(MainWindow);
-        actionASave->setObjectName("actionASave");
+        actionASave->setObjectName(QString::fromUtf8("actionASave"));
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8("images/asave.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon3.addFile(QString::fromUtf8("images/asave.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionASave->setIcon(icon3);
         actionQuit = new QAction(MainWindow);
-        actionQuit->setObjectName("actionQuit");
+        actionQuit->setObjectName(QString::fromUtf8("actionQuit"));
         actionUndo = new QAction(MainWindow);
-        actionUndo->setObjectName("actionUndo");
+        actionUndo->setObjectName(QString::fromUtf8("actionUndo"));
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8("images/undo.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon4.addFile(QString::fromUtf8("images/undo.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionUndo->setIcon(icon4);
         actionCuT = new QAction(MainWindow);
-        actionCuT->setObjectName("actionCuT");
+        actionCuT->setObjectName(QString::fromUtf8("actionCuT"));
         QIcon icon5;
-        icon5.addFile(QString::fromUtf8("images/cut.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon5.addFile(QString::fromUtf8("images/cut.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionCuT->setIcon(icon5);
         actionCopy = new QAction(MainWindow);
-        actionCopy->setObjectName("actionCopy");
+        actionCopy->setObjectName(QString::fromUtf8("actionCopy"));
         actionCopy->setIcon(icon1);
         actionAll = new QAction(MainWindow);
-        actionAll->setObjectName("actionAll");
+        actionAll->setObjectName(QString::fromUtf8("actionAll"));
         actionPaste = new QAction(MainWindow);
-        actionPaste->setObjectName("actionPaste");
+        actionPaste->setObjectName(QString::fromUtf8("actionPaste"));
         QIcon icon6;
-        icon6.addFile(QString::fromUtf8("images/paste.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon6.addFile(QString::fromUtf8("images/paste.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionPaste->setIcon(icon6);
         actionOptions = new QAction(MainWindow);
-        actionOptions->setObjectName("actionOptions");
+        actionOptions->setObjectName(QString::fromUtf8("actionOptions"));
         actionFont = new QAction(MainWindow);
-        actionFont->setObjectName("actionFont");
+        actionFont->setObjectName(QString::fromUtf8("actionFont"));
         actionTheme = new QAction(MainWindow);
-        actionTheme->setObjectName("actionTheme");
+        actionTheme->setObjectName(QString::fromUtf8("actionTheme"));
         actionLanguage = new QAction(MainWindow);
-        actionLanguage->setObjectName("actionLanguage");
+        actionLanguage->setObjectName(QString::fromUtf8("actionLanguage"));
         actionCalculator = new QAction(MainWindow);
-        actionCalculator->setObjectName("actionCalculator");
+        actionCalculator->setObjectName(QString::fromUtf8("actionCalculator"));
         actionCalendar = new QAction(MainWindow);
-        actionCalendar->setObjectName("actionCalendar");
+        actionCalendar->setObjectName(QString::fromUtf8("actionCalendar"));
         centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName("centralwidget");
+        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
-        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         textEdit = new QTextEdit(centralwidget);
-        textEdit->setObjectName("textEdit");
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
 
         horizontalLayout->addWidget(textEdit);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName("menubar");
+        menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 800, 36));
         menu = new QMenu(menubar);
-        menu->setObjectName("menu");
+        menu->setObjectName(QString::fromUtf8("menu"));
         menu_2 = new QMenu(menubar);
-        menu_2->setObjectName("menu_2");
+        menu_2->setObjectName(QString::fromUtf8("menu_2"));
         menuTools = new QMenu(menubar);
-        menuTools->setObjectName("menuTools");
+        menuTools->setObjectName(QString::fromUtf8("menuTools"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName("statusbar");
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
         toolBar = new QToolBar(MainWindow);
-        toolBar->setObjectName("toolBar");
-        MainWindow->addToolBar(Qt::ToolBarArea::TopToolBarArea, toolBar);
+        toolBar->setObjectName(QString::fromUtf8("toolBar"));
+        MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
         toolBar_2 = new QToolBar(MainWindow);
-        toolBar_2->setObjectName("toolBar_2");
-        MainWindow->addToolBar(Qt::ToolBarArea::TopToolBarArea, toolBar_2);
+        toolBar_2->setObjectName(QString::fromUtf8("toolBar_2"));
+        MainWindow->addToolBar(Qt::TopToolBarArea, toolBar_2);
 
         menubar->addAction(menu->menuAction());
         menubar->addAction(menu_2->menuAction());

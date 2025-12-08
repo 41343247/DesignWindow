@@ -12,6 +12,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 private slots:
+    void on_actionSave_triggered();
     void on_actionASave_triggered();
+private:
+    QString currentFilePath;
 };
 #endif // MAINWINDOW_H
